@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+  <!-- Latest compiled and minified CSS -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Mortgage Calculator</title>
+  <h1> Mortgage Calculator </h1>
+
+
+</head>
+
+<body ng-controller="MortgageController as vm">
+
+  <div class="container">
+    <form class="form-horizontal">
+
+      <div class="form-group">
+        <label for="loanBalance"> Loan Balance </label>
+        <input type="number" ng-model="vm.loanBalance" placeholder="$0.00">
+      </div>
+      <div class="form-group">
+        <label for="vm.interestRate"> Interest Rate (%) </label>
+        <input type="number" ng-model="vm.interestRate" placeholder=" %">
+      </div>
+      <div class="form-group">
+        <label for="loanTermInYears"> Loan Terms (Years) </label>
+        <input type="number" ng-model="vm.loanTermInYears" placeholder=" (yr)s">
+      </div>
+      <div class="form-group">
+        <label for="vm.period"> Period </label>
+        <select ng-model="vm.period" class="form-control" id="customSelect">
+          <option value="12"> Monthly  </option>
+          <option value="6"> Bimonthy </option>
+        </select>
+      </div>
+      <button type="button" ng-click="vm.calculateMortgage()" class="btn btn-primary">Calculate</button>
+    </form>
+  </div>
+
+
+</body>
+
+<P> Total Monthly amount: ${{vm.amount}} </P>
+
+<script src="app.js"></script>
+</link>
+</link>
+
+
+</html>

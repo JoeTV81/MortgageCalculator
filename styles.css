@@ -1,0 +1,17 @@
+h1 {}
+
+body {
+  background-image: url("http://teammovemortgage.com/wp-content/uploads/2016/05/mortgage_balancing-1.jpg");
+  text-align: center;
+}
+
+p {
+  margin: 10px 0 10px;
+}
+
+#customSelect {
+  display: inline;
+  text-align: center;
+  width: 15%;
+  height: 25px;
+}
